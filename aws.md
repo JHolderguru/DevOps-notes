@@ -23,24 +23,24 @@
 8) Add Tags
 	- Naming.Convention.Is.Important
 	- Key:Value
-	-[Name:Eng57.Patrick.C.NodeJSSampleWebApp]
+	-[Name:Eng57.Jonathan.H.NodeJSSampleWebApp]
 9) Configure Security Group
 	- Create New:
-		- Name [Eng.57.Patrick.C.HomeAccess]
-		- Description [Home access for Patrick C. on diff ports]
+		- Name [Eng.57.Jonathan.H.HomeAccess]
+		- Description [Home access for Jonathan H. on diff ports]
 		- Type, Protocol, Port Range, Source, Description
 		- [SSH, TCP, 22, MY IP, 'Patrick IP port 22 access']
-		- [Custom, TCP, 3000, MY IP, 'Patrick IP port 3000 access']
-		- [Custom, TCP, 5000, MY IP, 'Patrick IP port 5000 access']
-		- [Custom, TCP, 80, MY IP, 'Patrick IP port 80 access']
-		- [HTTPS, TCP, 443, MY IP, 'Patrick IP port 443 access']
+		- [Custom, TCP, 3000, MY IP, 'Jonathan IP port 3000 access']
+		- [Custom, TCP, 5000, MY IP, 'Jonathan IP port 5000 access']
+		- [Custom, TCP, 80, MY IP, 'Jonathan IP port 80 access']
+		- [HTTPS, TCP, 443, MY IP, 'Jonathan IP port 443 access']
 10) Review
 	- Check everything
 11) Choose key pair
 	- Create New
-		- [Eng57.Patrick.C]
+		- [Eng57.Jonathan.H]
 		- Generates SSH key in Downloads,
-		- `$ mv Eng57.Patrick.C.pem ~/.ssh`
+		- `$ mv Eng57JonathanH.C.pem ~/.ssh`
 	- Choose Class key
 12) Launch!
 
@@ -51,15 +51,15 @@
 	- Permissions! `-rwxr-xr-x` <-- What we want
 	- Convert to unix:
 		- `$ dos2unix provision.sh`
-	- `$ scp -i ~/.ssh/Eng57PatrickC.pem provision.sh ubuntu@[IPv4 Public IP]:/home/ubuntu`
+	- `$ scp -i ~/.ssh/Eng57JoJonathan.pem provision.sh ubuntu@[IPv4 Public IP]:/home/ubuntu`
 		- [secure copy in] [key] [file] [id@ip:path]
 2) Getting in:
-	- `$ ssh -i  ~/.ssh/Eng57PatrickC.pen ubuntu@[IPv4 Public IP]`
+	- `$ ssh -i  ~/.ssh/Eng57JonathanH.pen ubuntu@[IPv4 Public IP]`
 		- [ssh in] [key] [id@ip]
 3) Running provision
 	- `~$ ./provision.sh`
 4) Sending in `app/`
-	- `scp -i ~/.ssh/Eng57PatrickC.pem -r app/ ubuntu@[IPv4 Public IP]:/home/ubuntu/app`
+	- `scp -i ~/.ssh/Eng57JonathanH.pem -r app/ ubuntu@[IPv4 Public IP]:/home/ubuntu/app`
 	- Takes a while
 
 - scp
@@ -68,7 +68,7 @@
 ## Start App
 
 1) ssh in, FROM `~/.ssh`
-	- `$ ssh -i Eng57PatrickC.pem ubuntu@[IPv4 Public IP]`
+	- `$ ssh -i Eng57JonathanH.pem ubuntu@[IPv4 Public IP]`
 2) `$ cd ~/app`
    EITHER
    `npm install`
